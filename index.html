@@ -46,12 +46,12 @@ img{display:block;max-width:100%}
 
 /* HERO — drone/ken burns */
 .hero{position:relative;height:100vh;min-height:600px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
-.hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transform:scale(1.18);animation:drone 20s var(--ease) forwards}
-@keyframes drone{0%{transform:scale(1.32) translateY(-2%)}100%{transform:scale(1.05) translateY(0)}}
+.hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transform:scale(1.1);animation:drone 22s var(--ease) forwards}
+@keyframes drone{0%{transform:scale(1.16) translateY(-1.5%)}100%{transform:scale(1.04) translateY(0)}}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,58,75,.22),rgba(28,58,75,.5));z-index:-1}
-.hero__welcome{font-family:var(--sans);font-size:.78rem;letter-spacing:.5em;text-transform:uppercase;margin-bottom:1.4rem;opacity:0;animation:rise 1s var(--ease) .3s forwards}
-.hero__title{font-size:clamp(3.4rem,9.5vw,7.5rem);font-weight:500;letter-spacing:.02em;opacity:0;animation:rise 1.1s var(--ease) .5s forwards}
-.hero__sub{font-family:var(--sans);font-size:.82rem;letter-spacing:.35em;text-transform:uppercase;margin-top:1.6rem;opacity:0;animation:rise 1.1s var(--ease) .7s forwards}
+.hero__welcome{font-family:var(--sans);font-size:.78rem;letter-spacing:.5em;text-transform:uppercase;margin-bottom:1.4rem;opacity:0;animation:rise 1s var(--ease) .3s forwards;text-shadow:0 1px 12px rgba(12,26,32,.35)}
+.hero__title{font-size:clamp(3.4rem,9.5vw,7.5rem);font-weight:600;letter-spacing:.02em;opacity:0;animation:rise 1.1s var(--ease) .5s forwards;text-shadow:0 2px 24px rgba(12,26,32,.45)}
+.hero__sub{font-family:var(--sans);font-size:.82rem;letter-spacing:.35em;text-transform:uppercase;margin-top:1.6rem;opacity:0;animation:rise 1.1s var(--ease) .7s forwards;text-shadow:0 1px 12px rgba(12,26,32,.35)}
 .hero__cta{margin-top:2.6rem;opacity:0;animation:rise 1.1s var(--ease) .9s forwards}
 @keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 .tourbtn{font-family:var(--sans);display:inline-flex;align-items:center;gap:.7rem;background:rgba(255,255,255,.12);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.6);color:#fff;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;padding:1.05rem 2.4rem;cursor:pointer;transition:all .4s var(--ease)}
@@ -232,6 +232,8 @@ img.fadein.loaded{opacity:1}
   .nav__toggle.open span:nth-child(2){opacity:0}
   .nav__toggle.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
   .tour__slide figcaption{padding:1.6rem 1.4rem}
+  .hero__img{animation:droneMobile 22s var(--ease) forwards}
+  @keyframes droneMobile{0%{transform:scale(1.08) translateY(-1%)}100%{transform:scale(1.0) translateY(0)}}
 }
 @media(max-width:520px){.masonry{grid-template-columns:1fr}.infoline{flex-direction:column;gap:1rem}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}.hero__img{transform:scale(1.05)}}
@@ -271,8 +273,9 @@ img.fadein.loaded{opacity:1}
 
 <section class="section" style="padding-bottom:3rem">
   <div class="wrap"><div class="highlights reveal">
-    <div class="highlight"><div class="highlight__num">3</div><div class="highlight__label">Bedrooms<br>3 Beds</div></div>
-    <div class="highlight"><div class="highlight__num">2</div><div class="highlight__label">Bathrooms · Full</div></div>
+    <div class="highlight"><div class="highlight__num">3</div><div class="highlight__label">Bedrooms</div></div>
+    <div class="highlight"><div class="highlight__num">3</div><div class="highlight__label">Beds</div></div>
+    <div class="highlight"><div class="highlight__num">2</div><div class="highlight__label">Bathrooms<br>Full</div></div>
     <div class="highlight"><div class="highlight__num">6</div><div class="highlight__label">Sleeps</div></div>
     <div class="highlight"><div class="highlight__num">1,800</div><div class="highlight__label">Sq. Ft.</div></div>
     <div class="highlight"><div class="highlight__num">New</div><div class="highlight__label">Construction</div></div>
