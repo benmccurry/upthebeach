@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Up the Beach — Laguna Beach, FL</title>
+<meta name="description" content="Up the Beach — a brand-new 3-bedroom coastal cottage on the quiet west end of Panama City Beach, Florida. Sleeps 6, pet friendly, 0.2 miles to the sand.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgcng9IjEzIiBmaWxsPSIjMUMzQTRCIi8+CjxwYXRoIGQ9Ik0xNCAyNCBRMzIgMTUgNTAgMjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0E5RTFGOCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPHRleHQgeD0iMzIiIHk9IjQyIiBmb250LWZhbWlseT0iR2VvcmdpYSxzZXJpZiIgZm9udC1zaXplPSIyMiIgZm9udC13ZWlnaHQ9IjYwMCIgZmlsbD0iI0E5RTFGOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSI+VUI8L3RleHQ+Cjwvc3ZnPg==">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Up the Beach — Laguna Beach, FL">
+<meta property="og:description" content="A brand-new 3-bedroom coastal cottage on the quiet west end of Panama City Beach. Sleeps 6, pet friendly, 0.2 miles to the sand.">
+<meta property="og:url" content="https://upthebeachpcb.com">
+<meta property="og:image" content="https://upthebeachpcb.com/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Up the Beach — Laguna Beach, FL">
+<meta name="twitter:description" content="A brand-new 3-bedroom coastal cottage on the quiet west end of Panama City Beach. Sleeps 6, pet friendly, 0.2 miles to the sand.">
+<meta name="twitter:image" content="https://upthebeachpcb.com/hero.jpg">
+<meta name="theme-color" content="#1C3A4B">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Up the Beach">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400&family=Mona+Sans:wght@300;400;500&display=optional">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400&family=Mona+Sans:wght@300;400;500&display=optional" rel="stylesheet">
+<style>
+:root{
+  --white:#FBFAF6; --sand:#EFE7D8; --sand2:#E3D6C0; --aqua:#A9E1F8; --aqua-deep:#5FA8A6;
+  --sea:#3E7C84; --navy:#1C3A4B; --ink:#23302F; --grey:#6a7572; --line:#e2dccf;
+  --serif:"Cormorant",Georgia,serif; --sans:"Mona Sans","Helvetica Neue",Arial,sans-serif;
+  --maxw:1200px; --ease:cubic-bezier(.22,1,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-weight:300;color:var(--ink);background:var(--white);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.noscroll{overflow:hidden}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.view{display:none} .view.active{display:block;animation:viewfade .5s var(--ease)}
+@keyframes viewfade{from{opacity:0}to{opacity:1}}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 2rem}
+.eyebrow{font-family:var(--sans);font-size:.7rem;font-weight:400;letter-spacing:.4em;text-transform:uppercase;color:var(--aqua-deep);display:inline-flex;align-items:center;gap:.85rem}
+.eyebrow::before{content:"";width:30px;height:1px;background:var(--sand2)}
+
+/* NAV */
+.nav{position:fixed;inset:0 0 auto 0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.6rem 2.5rem;padding-top:max(1.6rem,env(safe-area-inset-top));transition:all .5s var(--ease)}
+.nav.solid{background:var(--white);padding:1rem 2.5rem;box-shadow:0 1px 0 var(--line)}
+.nav__logo{font-family:var(--serif);font-size:1.6rem;font-weight:600;letter-spacing:.04em;color:#fff;background:none;border:0;padding:0;cursor:pointer;transition:color .5s var(--ease),opacity .4s var(--ease);opacity:0;pointer-events:none}
+.nav.solid .nav__logo,.nav.show-logo .nav__logo{color:var(--navy);opacity:1;pointer-events:auto}
+.nav.show-logo:not(.solid) .nav__logo{color:#fff}
+.nav__links{display:flex;gap:2.4rem;align-items:center}
+.nav__links button.navlink{font-family:var(--sans);background:none;border:0;cursor:pointer;font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:#fff;position:relative;padding:.2rem 0;transition:color .5s var(--ease)}
+.nav.solid .nav__links button.navlink{color:var(--ink)}
+.nav__links button.navlink::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:1px;background:currentColor;transition:width .4s var(--ease)}
+.nav__links button.navlink:hover::after,.nav__links button.navlink.active::after{width:100%}
+.nav__book{font-family:var(--sans);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;background:var(--sea);border:1px solid var(--sea);padding:.7rem 1.5rem;color:#fff!important;border-radius:2px;transition:all .4s var(--ease)}
+.nav__book:hover{background:var(--navy);border-color:var(--navy);color:#fff!important}
+.nav__toggle{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+.nav__toggle span{width:24px;height:1.5px;background:#fff;transition:all .4s var(--ease)}
+.nav.solid .nav__toggle span{background:var(--ink)}
+
+/* HERO — drone/ken burns */
+.hero{position:relative;height:100vh;min-height:600px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
+.hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transform:scale(1.1);animation:drone 22s var(--ease) forwards}
+@keyframes drone{0%{transform:scale(1.16) translateY(-1.5%)}100%{transform:scale(1.04) translateY(0)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,58,75,.22),rgba(28,58,75,.5));z-index:-1}
+.hero__welcome{font-family:var(--sans);font-size:.78rem;letter-spacing:.5em;text-transform:uppercase;margin-bottom:1.4rem;opacity:0;animation:rise 1s var(--ease) .3s forwards;text-shadow:0 1px 12px rgba(12,26,32,.35)}
+.hero__title{font-size:clamp(3.4rem,9.5vw,7.5rem);font-weight:600;letter-spacing:.02em;opacity:0;animation:rise 1.1s var(--ease) .5s forwards;text-shadow:0 2px 24px rgba(12,26,32,.45)}
+.hero__sub{font-family:var(--sans);font-size:.82rem;letter-spacing:.35em;text-transform:uppercase;margin-top:1.6rem;opacity:0;animation:rise 1.1s var(--ease) .7s forwards;text-shadow:0 1px 12px rgba(12,26,32,.35)}
+.hero__cta{margin-top:2.6rem;opacity:0;animation:rise 1.1s var(--ease) .9s forwards}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.tourbtn{font-family:var(--sans);display:inline-flex;align-items:center;gap:.7rem;background:rgba(255,255,255,.12);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.6);color:#fff;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;padding:1.05rem 2.4rem;cursor:pointer;transition:all .4s var(--ease)}
+.tourbtn:hover{background:#fff;color:var(--sea)}
+.tourbtn svg{width:15px;height:15px}
+.hero__scrollhint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;opacity:.8}
+
+/* PAGE HERO (about/gallery tabs) */
+.pagehero{position:relative;height:58vh;min-height:420px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
+.pagehero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.pagehero::after{content:"";position:absolute;inset:0;background:rgba(28,58,75,.4);z-index:-1}
+.pagehero h1{font-size:clamp(2.8rem,6vw,5rem);font-weight:500}
+.pagehero .eyebrow{color:#fff;margin-bottom:1rem;justify-content:center}
+.pagehero .eyebrow::before{background:rgba(255,255,255,.6)}
+
+/* SECTIONS */
+.section{padding:7rem 0}
+.section--sand{background:var(--sand)}
+.section--navy{background:var(--navy);color:#fff}
+.section--sea{background:linear-gradient(155deg,var(--sea),var(--aqua-deep));color:#fff}
+.section__head{max-width:640px;margin-bottom:3.5rem}
+.section__head--center{margin:0 auto 3.5rem;text-align:center}
+.section__head--center .eyebrow{justify-content:center}
+.section__title{font-size:clamp(2.2rem,4.5vw,3.4rem);margin-top:1.1rem}
+.section__title--center{text-align:center}
+
+/* HIGHLIGHTS */
+.highlights{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.highlight{background:var(--white);padding:2.2rem 1rem;text-align:center}
+.highlight__num{font-family:var(--serif);font-size:2.7rem;font-weight:500;color:var(--sea);line-height:1}
+.highlight__label{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--grey);margin-top:.7rem}
+
+/* DESC */
+.desc{max-width:760px}
+.desc p{margin-bottom:1.4rem;font-size:1.08rem;color:#3a4644}
+.desc .lead{font-family:var(--serif);font-size:1.65rem;line-height:1.4;color:var(--sea);margin-bottom:2rem}
+/* cottage: text left + two stacked photos right */
+.cottage{display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:start}
+.cottage__text .lead{font-family:var(--serif);font-size:1.65rem;line-height:1.4;color:var(--sea);margin-bottom:2rem}
+.cottage__text p{margin-bottom:1.4rem;font-size:1.08rem;color:#3a4644}
+.cottage__media{position:sticky;top:6rem;display:flex;flex-direction:column;gap:1.2rem}
+.cottage__photo{overflow:hidden;border-radius:3px;cursor:pointer;aspect-ratio:4/3}
+.cottage__photo img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.cottage__photo:hover img{transform:scale(1.05)}
+.infoline{display:flex;flex-wrap:wrap;gap:1.4rem 2.6rem;margin-top:2.5rem;padding-top:2.5rem;border-top:1px solid var(--line)}
+.infoline div{font-size:.9rem;color:var(--grey)}
+.infoline strong{color:var(--ink);font-weight:500;display:block;font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;margin-bottom:.2rem}
+
+/* ACCORDION */
+.accordion{max-width:820px;margin:0 auto}
+.acc{border-bottom:1px solid var(--line)}
+.acc__btn{width:100%;background:none;border:0;cursor:pointer;text-align:left;padding:1.5rem 0;display:flex;justify-content:space-between;align-items:center;font-family:var(--serif);font-size:1.5rem;color:var(--sea)}
+.acc__btn .plus{position:relative;width:18px;height:18px;flex-shrink:0}
+.acc__btn .plus::before,.acc__btn .plus::after{content:"";position:absolute;background:var(--sea);transition:transform .4s var(--ease)}
+.acc__btn .plus::before{left:0;top:50%;width:100%;height:1.5px;transform:translateY(-50%)}
+.acc__btn .plus::after{top:0;left:50%;width:1.5px;height:100%;transform:translateX(-50%)}
+.acc.open .plus::after{transform:translateX(-50%) scaleY(0)}
+.acc__panel{max-height:0;overflow:hidden;transition:max-height .5s var(--ease)}
+.acc__panel ul{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.5rem 1.5rem;padding:0 0 1.8rem}
+.acc__panel li{font-size:.95rem;color:var(--ink);padding-left:1.2rem;position:relative}
+.acc__panel li::before{content:"";position:absolute;left:0;top:.65em;width:5px;height:5px;background:var(--aqua-deep);border-radius:50%}
+
+/* MAP */
+.map{width:100%;height:440px;border:0}
+/* weather widget */
+.weather{display:inline-flex;align-items:center;gap:.9rem;margin-top:1.6rem;padding:.7rem 1.4rem;background:var(--white);border:1px solid var(--line);border-radius:100px;font-size:.95rem;color:var(--ink)}
+.weather__icon{font-size:1.3rem;line-height:1}
+.weather__temp{font-family:var(--serif);font-size:1.4rem;color:var(--sea);font-weight:500}
+.weather__desc{color:var(--grey);font-size:.85rem;letter-spacing:.04em}
+.weather__loading{color:var(--grey);font-size:.85rem;letter-spacing:.04em}
+
+/* CTA / BTN */
+.cta-wrap{text-align:center}
+.btn{display:inline-block;font-family:var(--sans);font-size:.76rem;letter-spacing:.25em;text-transform:uppercase;padding:1.15rem 3rem;border:1px solid currentColor;color:var(--sea);background:transparent;cursor:pointer;transition:all .45s var(--ease)}
+.btn:hover{background:var(--sea);color:#fff;border-color:var(--sea)}
+.btn--light{color:#fff} .btn--light:hover{background:#fff;color:var(--sea);border-color:#fff}
+.btn--solid{background:var(--sea);color:#fff;border-color:var(--sea)} .btn--solid:hover{background:transparent;color:var(--sea)}
+
+/* CARDS */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.6rem}
+.card{background:var(--white);overflow:hidden;box-shadow:0 1px 0 var(--line)}
+.card__img{aspect-ratio:3/2;overflow:hidden;background:var(--sand)}
+.card__img img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.card:hover .card__img img{transform:scale(1.06)}
+.card__body{padding:1.5rem 1.4rem 1.8rem}
+.card__body h3{font-size:1.6rem;color:var(--sea);margin-bottom:.5rem}
+.card__body p{font-size:.92rem;color:var(--grey)}
+
+/* SPLIT */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.split__media{aspect-ratio:4/3;overflow:hidden}
+.split__media img{width:100%;height:100%;object-fit:cover}
+.split ul{list-style:none;margin-top:1.5rem}
+.split li{padding:.7rem 0 .7rem 1.6rem;border-bottom:1px solid var(--line);position:relative}
+.split li::before{content:"—";position:absolute;left:0;color:var(--aqua-deep)}
+
+/* EXPLORE (about) */
+.extabs{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-bottom:1.8rem}
+.extab{font-family:var(--sans);background:none;border:0;color:var(--grey);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:.7rem 1.3rem;cursor:pointer;position:relative;transition:color .35s var(--ease)}
+.extab::after{content:"";position:absolute;left:50%;bottom:0;width:0;height:2px;background:var(--sea);transform:translateX(-50%);transition:width .4s var(--ease)}
+.extab:hover{color:var(--sea)}
+.extab.active{color:var(--sea)}
+.extab.active::after{width:70%}
+.expanels{max-width:760px;margin:0 auto;min-height:240px}
+.expanel{display:none}
+.expanel.active{display:block}
+.exlist{display:flex;flex-direction:column}
+.exitem{padding:1rem .5rem;border-bottom:1px solid var(--sand2);display:flex;flex-direction:column;gap:.25rem;opacity:0;transform:translateY(16px);animation:exrise .6s var(--ease) forwards}
+.exitem:nth-child(1){animation-delay:.05s} .exitem:nth-child(2){animation-delay:.13s} .exitem:nth-child(3){animation-delay:.21s} .exitem:nth-child(4){animation-delay:.29s}
+@keyframes exrise{to{opacity:1;transform:none}}
+.exitem__name{font-family:var(--serif);font-size:1.35rem;font-weight:500;color:var(--ink);transition:color .3s,padding-left .3s var(--ease)}
+.exitem:hover .exitem__name{color:var(--sea);padding-left:.6rem}
+.exitem__desc{font-size:.9rem;color:var(--grey);line-height:1.45}
+
+/* GALLERY — bulletproof: plain blocks, fixed height, no aspect-ratio/grid dependency */
+.masonry{display:flex;flex-wrap:wrap;gap:1rem;max-width:1100px;margin:0 auto}
+.masonry__item{position:relative;overflow:hidden;border-radius:3px;cursor:pointer;width:calc(33.333% - 0.667rem);height:260px}
+.masonry__item img{display:block;width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.masonry__item:hover img{transform:scale(1.05)}
+.masonry__item::after{content:attr(data-cap);position:absolute;left:0;bottom:0;width:100%;padding:1.1rem 1.2rem;background:linear-gradient(0deg,rgba(28,58,75,.72),transparent);color:#fff;font-family:var(--serif);font-size:1.15rem;opacity:0;transition:opacity .4s var(--ease)}
+.masonry__item:hover::after{opacity:1}
+
+/* FULLSCREEN TOUR — auto-play slideshow */
+.tour{position:fixed;inset:0;z-index:300;background:#0c1a20;display:none;flex-direction:column}
+.tour.open{display:flex}
+.tour__stage{position:relative;flex:1;overflow:hidden}
+.tour__slide{position:absolute;inset:0;opacity:0;transition:opacity .7s var(--ease);pointer-events:none;display:flex;align-items:flex-end}
+.tour__slide.active{opacity:1;pointer-events:auto}
+.tour__slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.02)}
+.tour__slide.active img{animation:kenburns 3s var(--ease) forwards}
+@keyframes kenburns{from{transform:scale(1.02)}to{transform:scale(1.12)}}
+.tour__slide figcaption{position:relative;z-index:2;padding:2.5rem 3rem;background:linear-gradient(0deg,rgba(8,18,24,.85),transparent);width:100%;color:#fff}
+.tour__room{display:block;font-family:var(--serif);font-size:clamp(2rem,5vw,3.4rem);font-weight:500;line-height:1;opacity:0;transform:translateY(18px)}
+.tour__slide.active .tour__room{animation:rise .9s var(--ease) .25s forwards}
+.tour__cap{display:block;font-size:.9rem;letter-spacing:.04em;opacity:0;transform:translateY(14px);margin-top:.6rem}
+.tour__slide.active .tour__cap{animation:rise .9s var(--ease) .45s forwards}
+.tour__close{position:absolute;top:1.2rem;right:1.4rem;z-index:6;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.4);color:#fff;width:46px;height:46px;border-radius:50%;font-size:1.4rem;cursor:pointer;transition:all .3s}
+.tour__close:hover{background:#fff;color:#0c1a20}
+.tour__arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:6;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.35);color:#fff;width:54px;height:54px;border-radius:50%;font-size:1.6rem;cursor:pointer;font-family:var(--serif);transition:all .3s;display:flex;align-items:center;justify-content:center;opacity:.55}
+.tour__stage:hover .tour__arrow{opacity:1}
+.tour__arrow:hover{background:#fff;color:#0c1a20}
+.tour__prev{left:1.4rem} .tour__next{right:1.4rem}
+.tour__counter{position:absolute;top:1.4rem;left:1.6rem;z-index:6;color:#fff;font-size:.78rem;letter-spacing:.2em;opacity:.85}
+.tour__bar{position:absolute;top:0;left:0;height:3px;width:100%;background:rgba(255,255,255,.15);z-index:6}
+.tour__bar span{display:block;height:100%;width:0;background:var(--aqua);}
+.tour__bar span.run{animation:tbar 3s linear forwards}
+@keyframes tbar{from{width:0}to{width:100%}}
+.tour__controls{display:flex;align-items:center;justify-content:center;gap:1.5rem;padding:1rem 1.5rem 1.3rem;background:#0c1a20}
+.tour__play{background:none;border:1px solid rgba(255,255,255,.4);color:#fff;width:42px;height:42px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s}
+.tour__play:hover{background:#fff;color:#0c1a20}
+.tour__play svg{width:14px;height:14px}
+.tour__dots{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap}
+.tdot{width:9px;height:9px;border-radius:50%;border:0;background:rgba(255,255,255,.3);cursor:pointer;transition:all .3s;padding:0}
+.tdot.active{background:#fff;transform:scale(1.3)}
+
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;background:rgba(10,20,26,.95);z-index:250;display:none;align-items:center;justify-content:center}
+.lightbox.open{display:flex}
+.lightbox img{max-width:88vw;max-height:84vh;object-fit:contain;animation:viewfade .4s var(--ease)}
+.lightbox__fig{margin:0;display:flex;flex-direction:column;align-items:center;gap:1rem}
+.lightbox__cap{color:#fff;font-family:var(--serif);font-size:1.3rem;letter-spacing:.02em;opacity:.9;text-align:center}
+.lightbox__btn{position:absolute;background:none;border:0;color:#fff;font-size:2.4rem;cursor:pointer;padding:1rem;opacity:.8;transition:opacity .3s;font-family:var(--serif)}
+.lightbox__btn:hover{opacity:1}
+.lightbox__prev{left:1.5rem} .lightbox__next{right:1.5rem} .lightbox__close{top:1rem;right:1.5rem;font-size:1.8rem}
+
+/* FOOTER */
+.footer{background:var(--navy);color:#fff;text-align:center;padding:6rem 2rem 4.5rem}
+.footer__cta-title{font-size:clamp(2rem,4.5vw,3.2rem);margin:0 0 2.4rem;line-height:1.1}
+.footer__logo{font-family:var(--serif);font-size:2.1rem;font-weight:600;margin-bottom:.4rem;margin-top:1rem}
+.footer__loc{font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;opacity:.75;margin-bottom:2.2rem}
+.footer__nav{display:flex;gap:2rem;justify-content:center;margin:2.4rem 0}
+.footer__nav button{font-family:var(--sans);background:none;border:0;color:#fff;cursor:pointer;font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;opacity:.85}
+.footer__nav button:hover{opacity:1}
+.footer__fine{font-size:.72rem;opacity:.5;letter-spacing:.05em}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+/* image fade-in on load */
+img.fadein{opacity:1}
+.js-fade img.fadein{opacity:0;transition:opacity .6s var(--ease)}
+.js-fade img.fadein.loaded{opacity:1}
+/* scroll progress */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--aqua-deep),var(--sea));z-index:99;transition:width .1s linear;pointer-events:none}
+
+@media(max-width:860px){.split{grid-template-columns:1fr;gap:2rem}.masonry__item{width:calc(50% - 0.5rem);height:220px}.cottage{grid-template-columns:1fr;gap:2.5rem}.cottage__media{position:static;flex-direction:row;top:auto}.cottage__photo{flex:1}}
+@media(max-width:720px){
+  .wrap{padding:0 1.4rem} .section{padding:4.5rem 0}
+  .nav{padding:1.2rem 1.4rem} .nav.solid{padding:.9rem 1.4rem}
+  .nav__toggle{display:flex}
+  .nav__links{position:fixed;inset:0 0 0 auto;width:min(80vw,320px);background:var(--white);flex-direction:column;justify-content:center;gap:2.4rem;transform:translateX(100%);transition:transform .5s var(--ease);box-shadow:-10px 0 40px rgba(0,0,0,.12);z-index:102}
+  .nav__links.open{transform:none}
+  .nav__links button.navlink{color:var(--ink)!important;font-size:1.05rem}
+  .nav__toggle.open span{background:var(--ink)}
+  .nav__toggle.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+  .nav__toggle.open span:nth-child(2){opacity:0}
+  .nav__toggle.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+  .tour__slide figcaption{padding:1.6rem 1.4rem}
+  .hero__img{animation:droneMobile 22s var(--ease) forwards}
+  @keyframes droneMobile{0%{transform:scale(1.08) translateY(-1%)}100%{transform:scale(1.0) translateY(0)}}
+}
+@media(max-width:520px){.masonry__item{width:100%;height:300px}.infoline{flex-direction:column;gap:1rem}.cottage__media{flex-direction:column}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}.hero__img{transform:scale(1.05)}}
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+<nav class="nav" id="nav">
+  <button class="nav__logo" data-go="home">Up the Beach</button>
+  <button class="nav__toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="nav__links">
+    <button class="navlink active" data-go="home">Home</button>
+    <button class="navlink" data-go="about">About</button>
+    <button class="navlink" data-go="gallery">Gallery</button>
+    <a class="nav__book" href="https://bestbeachgetaways.com/vacation-rentals/panama-city-beach/laguna-beach/up-the-beach/" target="_blank" rel="noopener">Book a Stay</a>
+  </div>
+</nav>
+
+<!-- ===================== HOME ===================== -->
+<div class="view active" id="view-home">
+<header class="hero">
+  <img class="hero__img" decoding="async" fetchpriority="high" src="hero.jpg" alt="Up the Beach front exterior">
+  <div>
+    <p class="hero__welcome">Welcome to</p>
+    <h1 class="hero__title">Up the Beach</h1>
+    <p class="hero__sub">Laguna Beach, Florida</p>
+    <div class="hero__cta">
+      <button class="tourbtn" id="openTour">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 3l14 9-14 9V3z"/></svg>
+        Take the Tour
+      </button>
+    </div>
+  </div>
+  <div class="hero__scrollhint">Scroll to explore</div>
+</header>
+
+<section class="section" style="padding-bottom:3rem">
+  <div class="wrap"><div class="highlights reveal">
+    <div class="highlight"><div class="highlight__num" data-count="3">0</div><div class="highlight__label">Bedrooms</div></div>
+    <div class="highlight"><div class="highlight__num" data-count="3">0</div><div class="highlight__label">Beds</div></div>
+    <div class="highlight"><div class="highlight__num" data-count="2">0</div><div class="highlight__label">Bathrooms<br>Full</div></div>
+    <div class="highlight"><div class="highlight__num" data-count="6">0</div><div class="highlight__label">Sleeps</div></div>
+    <div class="highlight"><div class="highlight__num" data-count="1800" data-comma="1">0</div><div class="highlight__label">Sq. Ft.</div></div>
+    <div class="highlight"><div class="highlight__num">New</div><div class="highlight__label">Construction</div></div>
+    <div class="highlight"><div class="highlight__num" data-count="0.2" data-suffix="mi">0</div><div class="highlight__label">To the Beach</div></div>
+    <div class="highlight"><div class="highlight__num">Pet</div><div class="highlight__label">Friendly</div></div>
+  </div></div>
+</section>
+
+<section class="section" style="padding-top:2rem">
+  <div class="wrap">
+    <div class="cottage">
+      <div class="cottage__text reveal">
+        <span class="eyebrow">The Cottage</span>
+        <p class="lead" style="margin-top:1.4rem">Ready to kick back, relax, and live the beach life? Welcome to "Up the Beach"—your new favorite getaway on the laid-back west end of Panama City Beach.</p>
+        <p>This cozy cottage brings a perfect mix of old Florida charm and modern comforts, all while being pet-friendly (for up to 2 dogs under 60 pounds for an additional fee). Whether you're lounging in the living room or strolling down to the beach, this 3-bedroom, 2-bathroom gem is your home away from home.</p>
+        <p>Just a quick 0.2 miles from the beach, you'll love how easy it is to get your toes in the sand. Inside, you'll find a bright, spacious living room with plush seating and a 65" HD TV, a fully stocked kitchen with both a Keurig and drip coffee maker, and dining for six. The fenced side patio provides a private outdoor retreat.</p>
+        <p>The downstairs features a king bedroom with a 50" SMART TV and a full bathroom with a standalone shower. Upstairs includes a cozy office nook with a desk, reading chair, TV, and monitor, along with two additional bedrooms. The king master suite features a private balcony, while the queen bedroom offers another comfortable retreat.</p>
+        <p>Family-friendly amenities include a pack-and-play and high chair. Outside, guests can enjoy the fenced yard and propane grill. Additional beach gear such as bikes and paddleboards is available through a local partner with a stay-based credit.</p>
+        <div class="infoline">
+          <div><strong>Minimum Age</strong>Must be 25+ to rent</div>
+          <div><strong>Parking</strong>Up to 3 vehicles</div>
+          <div><strong>Pet Fee</strong>$150 per pet · 2 dogs max, under 60 lbs</div>
+          <div><strong>Beach Gear</strong>Third-party vendor · stay-length credit</div>
+        </div>
+      </div>
+      <div class="cottage__media reveal">
+        <div class="cottage__photo" data-lb data-cap="The Living Room"><img loading="lazy" decoding="async" src="liv1.jpg" alt="Up the Beach living room"></div>
+        <div class="cottage__photo" data-lb data-cap="The Beach"><img loading="lazy" decoding="async" src="beach.jpg" alt="The beach at Laguna Beach"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--sea">
+  <div class="wrap cta-wrap reveal">
+    <span class="eyebrow" style="justify-content:center;color:#fff">Step Inside</span>
+    <h2 class="section__title section__title--center" style="margin:1.2rem 0 1rem">See every room</h2>
+    <p style="max-width:480px;margin:0 auto 2.4rem;opacity:.9">Take a guided, full-screen walk through the whole house — room by room.</p>
+    <button class="btn btn--light" id="openTour2">Take the Tour</button>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head section__head--center reveal"><span class="eyebrow">Everything You Need</span><h2 class="section__title">Amenities</h2></div>
+    <div class="accordion reveal">
+      <div class="acc"><button class="acc__btn" aria-expanded="false">Entertainment <span class="plus"></span></button><div class="acc__panel"><ul><li>Satellite / Cable</li><li>Smart TV</li><li>Television</li></ul></div></div>
+      <div class="acc"><button class="acc__btn" aria-expanded="false">Essential Amenities <span class="plus"></span></button><div class="acc__panel"><ul><li>Air Conditioning</li><li>Clothes Dryer</li><li>Heating</li><li>Iron &amp; Board</li><li>Linens Provided</li><li>Toilet Paper</li><li>Towels Provided</li><li>Washing Machine</li><li>Wireless Internet</li></ul></div></div>
+      <div class="acc"><button class="acc__btn" aria-expanded="false">General <span class="plus"></span></button><div class="acc__panel"><ul><li>Pets Allowed</li><li>Internet</li><li>Living Room</li><li>Parking</li></ul></div></div>
+      <div class="acc"><button class="acc__btn" aria-expanded="false">Kitchen &amp; Dining <span class="plus"></span></button><div class="acc__panel"><ul><li>Coffee Maker</li><li>Dining Table</li><li>Dishes &amp; Utensils</li><li>Dishwasher</li><li>Grill</li><li>Kitchen</li><li>Oven</li><li>Refrigerator</li><li>Stove</li><li>Toaster</li></ul></div></div>
+      <div class="acc"><button class="acc__btn" aria-expanded="false">Local Services &amp; Business <span class="plus"></span></button><div class="acc__panel"><ul><li>Fitness Center</li></ul></div></div>
+      <div class="acc"><button class="acc__btn" aria-expanded="false">Office <span class="plus"></span></button><div class="acc__panel"><ul><li>Desk</li><li>Monitor</li></ul></div></div>
+      <div class="acc"><button class="acc__btn" aria-expanded="false">Outdoor Features <span class="plus"></span></button><div class="acc__panel"><ul><li>Deck / Patio</li><li>Outdoor Play Area</li><li>Porch / Veranda</li><li>Outdoor Shower</li></ul></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--sand">
+  <div class="wrap"><div class="section__head section__head--center reveal"><span class="eyebrow">The Location</span><h2 class="section__title">Laguna Beach</h2><p style="color:var(--grey);margin-top:.5rem">Florida · 0.2 miles to the sand</p>
+    <div class="weather reveal" id="weather"><span class="weather__loading">Checking the beach forecast…</span></div>
+  </div></div>
+  <div class="reveal"><iframe class="map" loading="lazy" decoding="async" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Laguna+Beach,+Panama+City+Beach,+FL&z=14&output=embed" title="Map of Laguna Beach, Panama City Beach"></iframe></div>
+</section>
+</div>
+
+<!-- ===================== ABOUT ===================== -->
+<div class="view" id="view-about">
+<header class="pagehero">
+  <img class="pagehero__img" src="about_hero.jpg" alt="Coastal scenery near Up the Beach">
+  <div><span class="eyebrow">Laguna Beach</span><h1>Up the Beach and Beyond…</h1></div>
+</header>
+
+<section class="section">
+  <div class="wrap"><div class="desc reveal" style="max-width:820px;margin:0 auto;text-align:center">
+    <p class="lead" style="margin-bottom:0">Nestled in the quiet charm of Laguna Beach, Up the Beach offers the perfect balance of laid-back coastal living and easy access to some of Panama City Beach's most loved destinations.</p>
+    <p style="margin-top:1.6rem">Whether you're here to unwind by the water, explore charming coastal towns, or enjoy local dining, everything you need is just minutes away.</p>
+  </div></div>
+</section>
+
+<section class="section section--sand" style="padding-top:4rem;padding-bottom:4rem">
+  <div class="wrap"><div class="split">
+    <div class="reveal"><span class="eyebrow">Nearby</span><h2 class="section__title" style="margin:1rem 0 1.2rem">Local Highlights</h2><p style="color:#3a4644">Before or after a beach day, guests can enjoy Thomas' Donuts, Carousel Supermarket, Pier Park, Shipwreck Island Waterpark, Gulf World, The Hub 30A, Destin Commons, Sandestin Outlet Mall, and numerous restaurants and grocery stores nearby.</p></div>
+    <div class="reveal"><span class="eyebrow">The Setting</span><h2 class="section__title" style="margin:1rem 0 1.2rem">About the Area</h2><p style="color:#3a4644">The West End of Panama City Beach offers a quieter atmosphere with beautiful white sand beaches and emerald Gulf waters. Nearby attractions include Camp Helen State Park and Conservation Park, along with opportunities for paddleboarding, kayaking, snorkeling, dining, shopping, and exploring local coastal communities.</p></div>
+  </div></div>
+</section>
+
+<section class="section">
+  <div class="wrap"><div class="split reveal">
+    <div class="split__media"><img src="beach.jpg" alt="White sand and emerald water"></div>
+    <div><span class="eyebrow">01 · The Beach</span><h2 class="section__title" style="margin:1rem 0 .5rem">Soft sand, emerald water</h2>
+      <ul><li>Short walk to public beach access</li><li>Quiet west-end location</li><li>Soft white sand and emerald water</li><li>Perfect for sunrise and sunset</li></ul></div>
+  </div></div>
+</section>
+
+<section class="section section--sand" id="explore">
+  <div class="wrap">
+    <div class="section__head section__head--center reveal"><span class="eyebrow">02 · Explore the Area</span><h2 class="section__title">Your guide to the West End</h2><p style="color:#3a4644;max-width:540px;margin:1rem auto 0">From sunrise donuts to sunset cruises — tap a category to see what's waiting just minutes from your door.</p></div>
+    <div class="extabs reveal">
+      <button class="extab active" data-ex="0">Eat &amp; Drink</button>
+      <button class="extab" data-ex="1">Shop &amp; Play</button>
+      <button class="extab" data-ex="2">On the Water</button>
+      <button class="extab" data-ex="3">Explore Outdoors</button>
+    </div>
+    <div class="expanels reveal">
+      <div class="expanel active" data-expanel="0">
+        <div class="exlist">
+          <div class="exitem"><span class="exitem__name">Thomas' Donuts</span><span class="exitem__desc">A 50-year beachside institution — fresh donuts and a classic Florida breakfast.</span></div>
+          <div class="exitem"><span class="exitem__name">Dusty's Oyster Bar</span><span class="exitem__desc">A no-frills local legend for fresh Gulf oysters and seafood.</span></div>
+          <div class="exitem"><span class="exitem__name">The Hub 30A</span><span class="exitem__desc">Open-air dining, live music, and a laid-back coastal vibe.</span></div>
+          <div class="exitem"><span class="exitem__name">Local Eats &amp; Markets</span><span class="exitem__desc">Carousel Supermarket and countless restaurants just minutes away.</span></div>
+        </div>
+      </div>
+      <div class="expanel" data-expanel="1">
+        <div class="exlist">
+          <div class="exitem"><span class="exitem__name">Pier Park</span><span class="exitem__desc">Open-air shopping, dining, the SkyWheel, and entertainment on the Gulf.</span></div>
+          <div class="exitem"><span class="exitem__name">Shipwreck Island Waterpark</span><span class="exitem__desc">Slides, a lazy river, and splash zones for the whole family.</span></div>
+          <div class="exitem"><span class="exitem__name">Gulf World Marine Park</span><span class="exitem__desc">Dolphin shows and up-close marine encounters.</span></div>
+          <div class="exitem"><span class="exitem__name">Destin Commons &amp; Sandestin Outlets</span><span class="exitem__desc">Premium shopping a scenic drive down the coast.</span></div>
+        </div>
+      </div>
+      <div class="expanel" data-expanel="2">
+        <div class="exlist">
+          <div class="exitem"><span class="exitem__name">Fishing Charters</span><span class="exitem__desc">Head offshore with a local captain for a day on the Gulf.</span></div>
+          <div class="exitem"><span class="exitem__name">Paddleboard &amp; Kayak</span><span class="exitem__desc">Glide across calm emerald water — gear available through a local partner.</span></div>
+          <div class="exitem"><span class="exitem__name">Snorkeling</span><span class="exitem__desc">Clear, shallow Gulf water perfect for spotting marine life.</span></div>
+          <div class="exitem"><span class="exitem__name">Sunset Cruises</span><span class="exitem__desc">End the day on the water as the Gulf turns gold.</span></div>
+        </div>
+      </div>
+      <div class="expanel" data-expanel="3">
+        <div class="exlist">
+          <div class="exitem"><span class="exitem__name">Camp Helen State Park</span><span class="exitem__desc">Trails, rare coastal dune lakes, and uncrowded shoreline to explore.</span></div>
+          <div class="exitem"><span class="exitem__name">Conservation Park</span><span class="exitem__desc">Miles of boardwalks and trails through natural Florida wetlands.</span></div>
+          <div class="exitem"><span class="exitem__name">30A &amp; Scenic Highway</span><span class="exitem__desc">The famous coastal route dotted with charming beach towns and boutiques.</span></div>
+          <div class="exitem"><span class="exitem__name">White Sand Beaches</span><span class="exitem__desc">Soft sand and emerald water, just a short walk from your door.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<!-- ===================== GALLERY ===================== -->
+<div class="view" id="view-gallery">
+<header class="pagehero">
+  <img class="pagehero__img" src="gallery_hero.jpg" alt="Aerial view of Up the Beach and the Gulf" style="object-position:center 55%">
+  <div><span class="eyebrow">A Closer Look</span><h1>Gallery</h1></div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head section__head--center reveal"><p style="color:var(--grey);max-width:520px;margin:0 auto">Scroll through the home and the beach lifestyle that surrounds it. Tap any image to view it full screen.</p></div>
+    <div class="masonry reveal"><div class="masonry__item" data-lb data-cap="Arrive"><img decoding="async" src="ext1.jpg" alt="Arrive"></div>
+<div class="masonry__item" data-lb data-cap="Arrive"><img decoding="async" src="ext2.jpg" alt="Arrive"></div>
+<div class="masonry__item" data-lb data-cap="Arrive"><img decoding="async" src="ext3.jpg" alt="Arrive"></div>
+<div class="masonry__item" data-lb data-cap="Living Room"><img decoding="async" src="liv1.jpg" alt="Living Room"></div>
+<div class="masonry__item" data-lb data-cap="Living Room"><img decoding="async" src="liv2.jpg" alt="Living Room"></div>
+<div class="masonry__item" data-lb data-cap="Living Room"><img decoding="async" src="liv3.jpg" alt="Living Room"></div>
+<div class="masonry__item" data-lb data-cap="Living Room"><img decoding="async" src="liv4.jpg" alt="Living Room"></div>
+<div class="masonry__item" data-lb data-cap="Dining"><img decoding="async" src="din1.jpg" alt="Dining"></div>
+<div class="masonry__item" data-lb data-cap="Kitchen"><img decoding="async" src="kit1.jpg" alt="Kitchen"></div>
+<div class="masonry__item" data-lb data-cap="Kitchen"><img decoding="async" src="kit2.jpg" alt="Kitchen"></div>
+<div class="masonry__item" data-lb data-cap="Kitchen"><img decoding="async" src="kit3.jpg" alt="Kitchen"></div>
+<div class="masonry__item" data-lb data-cap="Kitchen"><img decoding="async" src="kit4.jpg" alt="Kitchen"></div>
+<div class="masonry__item" data-lb data-cap="Bedrooms"><img decoding="async" src="bed1.jpg" alt="Bedrooms"></div>
+<div class="masonry__item" data-lb data-cap="Bedrooms"><img decoding="async" src="bed2.jpg" alt="Bedrooms"></div>
+<div class="masonry__item" data-lb data-cap="Bedrooms"><img decoding="async" src="bed3.jpg" alt="Bedrooms"></div>
+<div class="masonry__item" data-lb data-cap="Bedrooms"><img decoding="async" src="bed4.jpg" alt="Bedrooms"></div>
+<div class="masonry__item" data-lb data-cap="Baths"><img decoding="async" src="bath1.jpg" alt="Baths"></div>
+<div class="masonry__item" data-lb data-cap="Baths"><img decoding="async" src="bath2.jpg" alt="Baths"></div>
+<div class="masonry__item" data-lb data-cap="Porch & Patio"><img decoding="async" src="out1.jpg" alt="Porch & Patio"></div>
+<div class="masonry__item" data-lb data-cap="Porch & Patio"><img decoding="async" src="out2.jpg" alt="Porch & Patio"></div>
+<div class="masonry__item" data-lb data-cap="Porch & Patio"><img decoding="async" src="out3.jpg" alt="Porch & Patio"></div>
+<div class="masonry__item" data-lb data-cap="The Beach"><img decoding="async" src="beach.jpg" alt="The Beach"></div>
+<div class="masonry__item" data-lb data-cap="The Beach"><img decoding="async" src="bch1.jpg" alt="The Beach"></div>
+<div class="masonry__item" data-lb data-cap="The Beach"><img decoding="async" src="bch2.jpg" alt="The Beach"></div>
+</div>
+  </div>
+</section>
+</div>
+
+<footer class="footer">
+  <span class="eyebrow" style="justify-content:center;color:var(--aqua);margin-bottom:1.4rem">Ready When You Are</span>
+  <h2 class="footer__cta-title">Your stay starts here</h2>
+  <a class="btn btn--light" href="https://bestbeachgetaways.com/vacation-rentals/panama-city-beach/laguna-beach/up-the-beach/" target="_blank" rel="noopener" style="margin-bottom:3rem">Book a Stay</a>
+  <div class="footer__logo">Up the Beach</div>
+  <div class="footer__loc">Laguna Beach · Florida</div>
+  <nav class="footer__nav"><button data-go="home">Home</button><button data-go="about">About</button><button data-go="gallery">Gallery</button></nav>
+  <p class="footer__fine">© 2026 Up the Beach. All reservations handled through Best Beach Getaways.</p>
+</footer>
+
+<!-- TOUR OVERLAY -->
+<div class="tour" id="tour" aria-hidden="true">
+  <div class="tour__bar"><span id="tourBar"></span></div>
+  <button class="tour__close" id="tourClose" aria-label="Close tour">&times;</button>
+  <div class="tour__counter"><span id="tourNow">1</span> / 16</div>
+  <div class="tour__stage">
+    <figure class="tour__slide active"><img src="ext2.jpg" alt="Welcome Home"><figcaption><span class="tour__room">Welcome Home</span><span class="tour__cap">Brand-new construction on the quiet west end</span></figcaption></figure>
+<figure class="tour__slide"><img src="ext1.jpg" alt="The Exterior"><figcaption><span class="tour__room">The Exterior</span><span class="tour__cap">Classic coastal architecture with a metal roof</span></figcaption></figure>
+<figure class="tour__slide"><img src="liv1.jpg" alt="Living Room"><figcaption><span class="tour__room">Living Room</span><span class="tour__cap">Bright, open, and made for relaxing</span></figcaption></figure>
+<figure class="tour__slide"><img src="liv3.jpg" alt="Living Room"><figcaption><span class="tour__room">Living Room</span><span class="tour__cap">Plush seating and a 65" HD TV</span></figcaption></figure>
+<figure class="tour__slide"><img src="din1.jpg" alt="Dining"><figcaption><span class="tour__room">Dining</span><span class="tour__cap">Seats six for family meals in</span></figcaption></figure>
+<figure class="tour__slide"><img src="kit1.jpg" alt="Kitchen"><figcaption><span class="tour__room">Kitchen</span><span class="tour__cap">Fully stocked — Keurig & drip coffee maker</span></figcaption></figure>
+<figure class="tour__slide"><img src="kit2.jpg" alt="Kitchen"><figcaption><span class="tour__room">Kitchen</span><span class="tour__cap">Stainless appliances and bright counters</span></figcaption></figure>
+<figure class="tour__slide"><img src="bed1.jpg" alt="King Suite"><figcaption><span class="tour__room">King Suite</span><span class="tour__cap">The downstairs king with a 50" Smart TV</span></figcaption></figure>
+<figure class="tour__slide"><img src="bed3.jpg" alt="King Master"><figcaption><span class="tour__room">King Master</span><span class="tour__cap">Private balcony off the master suite</span></figcaption></figure>
+<figure class="tour__slide"><img src="bed4.jpg" alt="Bedroom"><figcaption><span class="tour__room">Bedroom</span><span class="tour__cap">A second comfortable retreat</span></figcaption></figure>
+<figure class="tour__slide"><img src="bed5.jpg" alt="Queen Bedroom"><figcaption><span class="tour__room">Queen Bedroom</span><span class="tour__cap">Another restful space upstairs</span></figcaption></figure>
+<figure class="tour__slide"><img src="bath1.jpg" alt="Bath"><figcaption><span class="tour__room">Bath</span><span class="tour__cap">Standalone shower and clean finishes</span></figcaption></figure>
+<figure class="tour__slide"><img src="out1.jpg" alt="The Porch"><figcaption><span class="tour__room">The Porch</span><span class="tour__cap">Rocking chairs and Gulf breezes</span></figcaption></figure>
+<figure class="tour__slide"><img src="out2.jpg" alt="Side Patio"><figcaption><span class="tour__room">Side Patio</span><span class="tour__cap">A private, fenced outdoor retreat</span></figcaption></figure>
+<figure class="tour__slide"><img src="out3.jpg" alt="Backyard"><figcaption><span class="tour__room">Backyard</span><span class="tour__cap">Fenced yard with a propane grill</span></figcaption></figure>
+<figure class="tour__slide"><img src="bch1.jpg" alt="The Beach"><figcaption><span class="tour__room">The Beach</span><span class="tour__cap">Just 0.2 miles to the white sand</span></figcaption></figure>
+
+    <button class="tour__arrow tour__prev" id="tourPrev" aria-label="Previous">&#8249;</button>
+    <button class="tour__arrow tour__next" id="tourNext" aria-label="Next">&#8250;</button>
+  </div>
+  <div class="tour__controls">
+    <button class="tour__play" id="tourPlay" aria-label="Pause">
+      <svg id="iconPause" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg>
+      <svg id="iconPlay" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 4l14 8-14 8V4z"/></svg>
+    </button>
+    <div class="tour__dots"><button class="tdot active" data-i="0" aria-label="Welcome Home"></button><button class="tdot" data-i="1" aria-label="The Exterior"></button><button class="tdot" data-i="2" aria-label="Living Room"></button><button class="tdot" data-i="3" aria-label="Living Room"></button><button class="tdot" data-i="4" aria-label="Dining"></button><button class="tdot" data-i="5" aria-label="Kitchen"></button><button class="tdot" data-i="6" aria-label="Kitchen"></button><button class="tdot" data-i="7" aria-label="King Suite"></button><button class="tdot" data-i="8" aria-label="King Master"></button><button class="tdot" data-i="9" aria-label="Bedroom"></button><button class="tdot" data-i="10" aria-label="Queen Bedroom"></button><button class="tdot" data-i="11" aria-label="Bath"></button><button class="tdot" data-i="12" aria-label="The Porch"></button><button class="tdot" data-i="13" aria-label="Side Patio"></button><button class="tdot" data-i="14" aria-label="Backyard"></button><button class="tdot" data-i="15" aria-label="The Beach"></button></div>
+  </div>
+</div>
+
+<script>
+// ---------- image fade-in (iOS-safe: images never stay blank) ----------
+(function(){
+  document.documentElement.classList.add('js-fade');
+  const sel='.hero__img,.pagehero__img,.card__img img,.split__media img,.cottage__photo img,.tour__slide img';
+  const imgs=document.querySelectorAll(sel);
+  imgs.forEach(img=>{
+    img.classList.add('fadein');
+    const show=()=>img.classList.add('loaded');
+    if(img.complete&&img.naturalWidth>0){show();return;}
+    img.addEventListener('load',show,{once:true});
+    img.addEventListener('error',show,{once:true});
+  });
+  // failsafe: force-show everything shortly after load no matter what (covers iOS lazy-load quirks)
+  function showAll(){document.querySelectorAll(sel).forEach(i=>i.classList.add('loaded'));}
+  window.addEventListener('load',()=>setTimeout(showAll,400));
+  setTimeout(showAll,2500);
+  // when scrolling, any lazy image that has decoded but missed its event gets shown
+  let st;window.addEventListener('scroll',()=>{clearTimeout(st);st=setTimeout(()=>{
+    document.querySelectorAll(sel).forEach(i=>{if(i.complete&&i.naturalWidth>0)i.classList.add('loaded');});
+  },120);},{passive:true});
+})();
+// ---------- view router (tabbed site) ----------
+const views={home:document.getElementById('view-home'),about:document.getElementById('view-about'),gallery:document.getElementById('view-gallery')};
+const navlinks=[...document.querySelectorAll('.navlink')];
+const toggle=document.querySelector('.nav__toggle'),links=document.querySelector('.nav__links');
+function go(name){
+  Object.entries(views).forEach(([k,v])=>v.classList.toggle('active',k===name));
+  navlinks.forEach(b=>b.classList.toggle('active',b.dataset.go===name));
+  links.classList.remove('open');toggle.classList.remove('open');toggle.setAttribute('aria-expanded',false);
+  document.body.classList.remove('noscroll');
+  // logo shows immediately on About/Gallery (no big hero title there); on Home it appears on scroll
+  document.getElementById('nav').classList.toggle('show-logo', name!=='home');
+  window.scrollTo({top:0,behavior:'instant'});
+  onScroll();
+  setTimeout(()=>{
+    document.querySelectorAll('.view.active .reveal').forEach(el=>io.observe(el));
+    // force any images in the now-visible view to show (iOS hidden-view fix)
+    document.querySelectorAll('.view.active img.fadein').forEach(i=>i.classList.add('loaded'));
+  },30);
+}
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.go)));
+
+// ---------- nav scroll ----------
+const nav=document.getElementById('nav');
+const progress=document.getElementById('progress');
+const onScroll=()=>{
+  nav.classList.toggle('solid',window.scrollY>40);
+  const h=document.documentElement.scrollHeight-window.innerHeight;
+  progress.style.width=(h>0?(window.scrollY/h)*100:0)+'%';
+};onScroll();
+window.addEventListener('scroll',onScroll,{passive:true});
+toggle.addEventListener('click',()=>{const o=links.classList.toggle('open');toggle.classList.toggle('open',o);toggle.setAttribute('aria-expanded',o);});
+
+// ---------- accordion ----------
+document.querySelectorAll('.acc__btn').forEach(btn=>btn.addEventListener('click',()=>{
+  const acc=btn.closest('.acc'),panel=acc.querySelector('.acc__panel'),o=acc.classList.toggle('open');
+  panel.style.maxHeight=o?panel.scrollHeight+'px':null;btn.setAttribute('aria-expanded',o);
+}));
+
+// ---------- reveal ----------
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// ---------- number count-up ----------
+const counters=document.querySelectorAll('.highlight__num[data-count]');
+const cio=new IntersectionObserver((es)=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  const el=e.target;cio.unobserve(el);
+  const target=parseFloat(el.dataset.count),comma=el.dataset.comma,suffix=el.dataset.suffix||'';
+  const decimals=(el.dataset.count.split('.')[1]||'').length;
+  const dur=1400,start=performance.now();
+  function fmt(n){
+    let s=decimals?n.toFixed(decimals):Math.round(n).toString();
+    if(comma)s=Math.round(n).toLocaleString('en-US');
+    return s;
+  }
+  function tick(now){
+    const p=Math.min((now-start)/dur,1);
+    const eased=1-Math.pow(1-p,3);
+    const val=target*eased;
+    el.innerHTML=fmt(val)+(suffix?'<span style="font-size:1.1rem">'+suffix+'</span>':'');
+    if(p<1)requestAnimationFrame(tick);
+    else el.innerHTML=fmt(target)+(suffix?'<span style="font-size:1.1rem">'+suffix+'</span>':'');
+  }
+  requestAnimationFrame(tick);
+}),{threshold:.5});
+counters.forEach(c=>cio.observe(c));
+
+// ---------- explore tabs (about) ----------
+const extabs=[...document.querySelectorAll('.extab')],expanels=[...document.querySelectorAll('.expanel')];
+extabs.forEach(t=>t.addEventListener('click',()=>{
+  const i=t.dataset.ex;
+  extabs.forEach(x=>x.classList.toggle('active',x===t));
+  expanels.forEach(p=>{
+    const on=p.dataset.expanel===i;
+    p.classList.toggle('active',on);
+    if(on){p.querySelectorAll('.exitem').forEach(it=>{it.style.animation='none';it.offsetHeight;it.style.animation='';});}
+  });
+}));
+
+// ---------- gallery: uniform grid, no JS sizing needed (fixed aspect-ratio) ----------
+
+// ---------- full-screen tour (auto-play slideshow) ----------
+const tour=document.getElementById('tour'),slides=[...tour.querySelectorAll('.tour__slide')],tdots=[...tour.querySelectorAll('.tdot')];
+const tourBar=document.getElementById('tourBar'),iconPlay=document.getElementById('iconPlay'),iconPause=document.getElementById('iconPause');
+const SLIDE_MS=3000;
+let ti=0,tTimer=null,tPlaying=true;
+function tRestartBar(){tourBar.classList.remove('run');void tourBar.offsetWidth;if(tPlaying)tourBar.classList.add('run');}
+function tshow(i){
+  ti=(i+slides.length)%slides.length;
+  slides.forEach((s,k)=>s.classList.toggle('active',k===ti));
+  tdots.forEach((d,k)=>d.classList.toggle('active',k===ti));
+  document.getElementById('tourNow').textContent=ti+1;
+  tRestartBar();
+}
+function tNext(){tshow(ti+1);}
+function tPlay(){tPlaying=true;iconPlay.style.display='none';iconPause.style.display='';clearInterval(tTimer);tTimer=setInterval(tNext,SLIDE_MS);tRestartBar();}
+function tPause(){tPlaying=false;iconPlay.style.display='';iconPause.style.display='none';clearInterval(tTimer);tourBar.classList.remove('run');}
+function tStep(d){tshow(ti+d);if(tPlaying){clearInterval(tTimer);tTimer=setInterval(tNext,SLIDE_MS);}}
+function openTour(){tour.classList.add('open');tour.setAttribute('aria-hidden','false');document.body.classList.add('noscroll');tshow(0);tPlay();}
+function closeTour(){tour.classList.remove('open');tour.setAttribute('aria-hidden','true');document.body.classList.remove('noscroll');tPause();}
+document.getElementById('openTour').addEventListener('click',openTour);
+document.getElementById('openTour2').addEventListener('click',openTour);
+document.getElementById('tourClose').addEventListener('click',closeTour);
+document.getElementById('tourPrev').addEventListener('click',()=>tStep(-1));
+document.getElementById('tourNext').addEventListener('click',()=>tStep(1));
+document.getElementById('tourPlay').addEventListener('click',()=>{tPlaying?tPause():tPlay();});
+tdots.forEach(d=>d.addEventListener('click',()=>{tshow(+d.dataset.i);if(tPlaying){clearInterval(tTimer);tTimer=setInterval(tNext,SLIDE_MS);}}));
+document.addEventListener('keydown',e=>{if(!tour.classList.contains('open'))return;if(e.key==='Escape')closeTour();if(e.key==='ArrowLeft')tStep(-1);if(e.key==='ArrowRight')tStep(1);if(e.key===' '){e.preventDefault();tPlaying?tPause():tPlay();}});
+// swipe (mobile)
+let sx=0;tour.addEventListener('touchstart',e=>sx=e.touches[0].clientX,{passive:true});
+tour.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50)tStep(dx<0?1:-1);},{passive:true});
+
+// ---------- lightbox (gallery + cottage) with captions + swipe ----------
+let lbItems=[];
+const lb=document.createElement('div');lb.className='lightbox';
+lb.innerHTML='<button class="lightbox__btn lightbox__close" aria-label="Close">&times;</button><button class="lightbox__btn lightbox__prev" aria-label="Previous">&#8249;</button><figure class="lightbox__fig"><img alt=""><figcaption class="lightbox__cap"></figcaption></figure><button class="lightbox__btn lightbox__next" aria-label="Next">&#8250;</button>';
+document.body.appendChild(lb);
+const lbImg=lb.querySelector('img'),lbCap=lb.querySelector('.lightbox__cap');let lci=0;
+function lbRender(){
+  lbImg.src=lbItems[lci].src;
+  const cap=lbItems[lci].closest('[data-lb]')?.dataset.cap||'';
+  lbCap.textContent=cap;lbCap.style.display=cap?'block':'none';
+}
+function lbOpen(arr,i){lbItems=arr;lci=i;lbRender();lb.classList.add('open');document.body.classList.add('noscroll');}
+function lbClose(){lb.classList.remove('open');document.body.classList.remove('noscroll');}
+function lbStep(d){lci=(lci+d+lbItems.length)%lbItems.length;lbRender();}
+document.addEventListener('click',e=>{
+  const it=e.target.closest('[data-lb]');if(!it)return;
+  const scope=it.closest('.masonry')||it.closest('.cottage__media')||document;
+  const imgs=[...scope.querySelectorAll('[data-lb] img')];
+  lbOpen(imgs,imgs.indexOf(it.querySelector('img')));
+});
+lb.querySelector('.lightbox__close').addEventListener('click',lbClose);
+lb.querySelector('.lightbox__prev').addEventListener('click',e=>{e.stopPropagation();lbStep(-1);});
+lb.querySelector('.lightbox__next').addEventListener('click',e=>{e.stopPropagation();lbStep(1);});
+lb.addEventListener('click',e=>{if(e.target===lb||e.target.classList.contains('lightbox__fig'))lbClose();});
+document.addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')lbClose();if(e.key==='ArrowLeft')lbStep(-1);if(e.key==='ArrowRight')lbStep(1);});
+// swipe on mobile
+let lsx=0,lsy=0;
+lb.addEventListener('touchstart',e=>{lsx=e.touches[0].clientX;lsy=e.touches[0].clientY;},{passive:true});
+lb.addEventListener('touchend',e=>{
+  const dx=e.changedTouches[0].clientX-lsx,dy=e.changedTouches[0].clientY-lsy;
+  if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy))lbStep(dx<0?1:-1);
+  else if(dy>80&&Math.abs(dy)>Math.abs(dx))lbClose();
+},{passive:true});
+// ---------- live weather widget (Open-Meteo, no key) ----------
+(function(){
+  const el=document.getElementById('weather');if(!el)return;
+  const codes={0:['Clear','☀️'],1:['Mainly clear','🌤️'],2:['Partly cloudy','⛅'],3:['Overcast','☁️'],45:['Foggy','🌫️'],48:['Foggy','🌫️'],51:['Light drizzle','🌦️'],53:['Drizzle','🌦️'],55:['Drizzle','🌦️'],61:['Light rain','🌧️'],63:['Rain','🌧️'],65:['Heavy rain','🌧️'],71:['Light snow','🌨️'],73:['Snow','🌨️'],75:['Snow','🌨️'],80:['Showers','🌦️'],81:['Showers','🌧️'],82:['Heavy showers','⛈️'],95:['Thunderstorm','⛈️'],96:['Thunderstorm','⛈️'],99:['Thunderstorm','⛈️']};
+  fetch('https://api.open-meteo.com/v1/forecast?latitude=30.27&longitude=-85.97&current=temperature_2m,weather_code&temperature_unit=fahrenheit&timezone=America%2FChicago')
+    .then(r=>r.json())
+    .then(d=>{
+      const t=Math.round(d.current.temperature_2m);
+      const c=codes[d.current.weather_code]||['',''];
+      el.innerHTML='<span class="weather__icon">'+c[1]+'</span><span class="weather__temp">'+t+'°F</span><span class="weather__desc">'+c[0]+' at the beach right now</span>';
+    })
+    .catch(()=>{el.style.display='none';});
+})();
+</script>
+</body>
+</html>
